@@ -63,4 +63,4 @@ RegisterNumber:24008491
 ![image](https://github.com/user-attachments/assets/1e61b098-53c9-4ebb-bbb4-08d688b1b4af)
 
 **RESULTS**
-SISO shift Register using verilog is verified.
+SISO shift Register using verilog is verified. 
