@@ -51,8 +51,8 @@ q[3] <= q[2];
 end
 endmodule
 ```
-Developed by:A.DIVIYADHARSHINI
-RegisterNumber:24008491
+Developed by:S Yogesh
+RegisterNumber:24901108
 
 
 
