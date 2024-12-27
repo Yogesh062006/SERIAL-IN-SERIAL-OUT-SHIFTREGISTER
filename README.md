@@ -9,7 +9,7 @@ To implement  SISO Shift Register using verilog and validating their functionali
 Quartus prime
 
 **THEORY**
-
+ 
 **SISO shift Register**
 
 A Serial-In Serial-Out shift register is a sequential logic circuit that allows data to be shifted in and out one bit at a time in a serial manner. It consists of a cascade of flip-flops connected in series, forming a chain. The input data is applied to the first flip-flop in the chain, and as the clock pulses, the data propagates through the flip-flops, ultimately appearing at the output.
@@ -23,20 +23,49 @@ Figure 01 4 Bit SISO Register
 The synchronous nature of the flip-flops ensures that the shifting of data occurs in a coordinated manner. When the clock signal rises, the input data is sampled and stored in the first flip-flop. On subsequent clock pulses, the stored data propagates through the flip-flops, moving from one flip-flop to the next.
 Each D flip-flop in the circuit has a Data (D) input, a Clock (CLK) input, and an output (Q). The D input represents the data to be loaded into the flip-flop, while the CLK input is connected to the common clock signal. The output (Q) of each flip-flop is connected to the D input of the next flip-flop, forming a cascade.
 
+**TRUTH TABLE**
+
+![WhatsApp Image 2024-12-21 at 08 38 46_ae0bb5ed](https://github.com/user-attachments/assets/65f443e8-971a-46c9-9a44-8d539232d510)
+
 **Procedure**
 
-/* write all the steps invloved */
+1.Type the program in Quartus software.
+
+2.Compile and run the program.
+
+3.Generate the RTL schematic and save the logic diagram.
+
+4.Create nodes for inputs and outputs to generate the timing diagram.
+
+5.For different input combinations generate the timing diagram
 
 **PROGRAM**
 
-/* Program for flipflops and verify its truth table in quartus using Verilog programming.
+        module EXP10(clk, sin, q);
+            input clk;
+            input sin;
+            output [3:0] q;
+            reg [3:0] q;
+            always @(posedge clk)
+            begin
+            q[0] <= sin;
+            q[1] <= q[0];
+            q[2] <= q[1];
+            q[3] <= q[2];
+            end
+            endmodule
+      
+Developed by:YOGESH S
 
-Developed by: RegisterNumber:
+RegisterNumber:24901108
 
-*/
 
 **RTL LOGIC FOR SISO Shift Register**
+![Screenshot 2024-12-20 141232](https://github.com/user-attachments/assets/ea8d85ad-6784-42fa-9b61-b45df40920ba)
 
-**TIMING DIGRAMS FOR SISO Shift Register**
+**TIMING DIAGRAM FOR SISO Shift Register**
 
-**RESULTS**
+![WhatsApp Image 2024-12-27 at 14 06 17_8ae70526](https://github.com/user-attachments/assets/38dd23ba-b9bc-4144-96db-ca5519288a38)
+
+**RESULT**
+Thus the Serial-In Serial-Out shift register is implemented and verified.
